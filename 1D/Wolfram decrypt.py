@@ -2,25 +2,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product
 
-wolfram_code=240
-# random.seed(0)
+wolfram_code=85
 
-rule={t:int(b) for t,b in zip(product((0,1),repeat=3),'{:08b}'.format(wolfram_code))}
+rule={t:int(b) for t,b in zip(product((1,0),repeat=3),'{:08b}'.format(wolfram_code))}
 
 
-s="ဇ〆䀆怆瀆耆ꀆ뀆쀇ꀇ耆〇怆 퀻တ၁䁃䈤舃ሢ눡꿱ɩ뉣뀃ဃ 〃䀃倃怃瀃考逃ဇ瀆倇 䀇逇倆逆"
-
+s="３［ＣＥ﷽뭯뾝뮩믊ǁ꿿닉뎉ﾝﾛﾙﾗﾕﾓﾑﾏﾍﾟ＝１Ｕ；７－５ＭＡ？］９ＷＳＱＯＫＩＧ＋／Ｙ"
+print(s)
 messagechar=[i for i in map(ord,s)]
 
 message=[]
-i=0
 for m in messagechar:
-    i+=1
     message+=list(map(int,'{:016b}'.format(m)))
+print("".join(map(str,message)))
     
 n=len(message)#number of cells
 
-generation=300
+generation=255
 
 #random cells
 cells=message

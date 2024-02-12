@@ -1,13 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from itertools import product
-# import random
 
-wolfram_code=170
-# random.seed(0)
+wolfram_code=15
 
-rule={t:int(b) for t,b in zip(product((0,1),repeat=3),'{:08b}'.format(wolfram_code))}
-# print(wolfram_code,'{:08b}'.format(wolfram_code),rule)
+rule={t:int(b) for t,b in zip(product((1,0),repeat=3),'{:08b}'.format(wolfram_code))}
+
 
 s="1234567890qwertyuiopasdfghjklzxcvbnmαāДд≈‱∫√？⠀⚛☻"
 print(s)
@@ -20,7 +18,7 @@ print("".join(map(str,message)))
 
 n=len(message)#number of cells
 
-generation=300
+generation=255
 
 #random cells
 cells=message
